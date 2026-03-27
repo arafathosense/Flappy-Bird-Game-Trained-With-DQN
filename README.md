@@ -1,5 +1,21 @@
 # 🐦 Flappy-Bird-Game-Trained-With-DQN
 
+
+
+
+
+
+
+
+![ViZDoom Demo](https://raw.githubusercontent.com/arafathosense/Flappy-Bird-Game-Trained-With-DQN/output.gif)
+
+
+
+
+
+
+
+
 <div align="center">
 
 ![Flappy Bird DQN](https://img.shields.io/badge/Project-Flappy%20Bird%20DQN-brightgreen?style=for-the-badge&logo=python&logoColor=white)
