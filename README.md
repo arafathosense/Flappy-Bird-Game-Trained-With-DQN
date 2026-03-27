@@ -1,66 +1,8 @@
 # 🐦 Flappy-Bird-Game-Trained-With-DQN
 
-
-
-
-
-
-
-
-![ViZDoom Demo](https://raw.githubusercontent.com/arafathosense/Flappy-Bird-Game-Trained-With-DQN/output.gif)
-
-
-
-
-
-
-
-
-<div align="center">
-
-![Flappy Bird DQN](https://img.shields.io/badge/Project-Flappy%20Bird%20DQN-brightgreen?style=for-the-badge&logo=python&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![PyTorch](https://img.shields.io/badge/PyTorch-2.x-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
-![Gymnasium](https://img.shields.io/badge/Gymnasium-0.29%2B-0081A7?style=for-the-badge&logo=openaigym&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
-
-<br/>
-
-> **A Double Deep Q-Network (DDQN) reinforcement learning agent that learns to play Flappy Bird from scratch — with reward shaping, gradient clipping, and best-episode rendering.**
-
-<br/>
-
-<img src="https://i.pcmag.com/imagery/reviews/06fBcC3YpdFj7i0VvkWspTj-1.fit_lim.size_885x1444.v_1569469985.jpg" alt="Agent playing Flappy Bird" height="300"/>
-
-<br/>
-
-[![Watch Demo](https://img.shields.io/badge/▶%20Watch%20Demo-YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](#)
-[![Open Issues](https://img.shields.io/github/issues/saifullah857/Flappy-Bird-Game-Trained-With-DQN?style=for-the-badge&logo=github)](https://github.com/saifullah857/Flappy-Bird-Game-Trained-With-DQN/issues)
-[![Stars](https://img.shields.io/github/stars/saifullah857/Flappy-Bird-Game-Trained-With-DQN?style=for-the-badge&logo=github&color=gold)](https://github.com/saifullah857/Flappy-Bird-Game-Trained-With-DQN/stargazers)
-
-</div>
-
----
-
-## 📋 Table of Contents
-
-- [✨ Overview](#-overview)
-- [🧠 How It Works](#-how-it-works)
-- [🗂️ Project Structure](#️-project-structure)
-- [⚙️ Installation](#️-installation)
-- [🚀 Usage](#-usage)
-- [🎛️ Hyperparameters](#️-hyperparameters)
-- [📊 Training Results](#-training-results)
-- [🛠️ Technologies Used](#️-technologies-used)
-- [🤝 Contributing](#-contributing)
-- [📄 License](#-license)
-
----
-
-## ✨ Overview
-
 **Flappy-Bird-Game-Trained-With-DQN** trains an autonomous AI agent to play **Flappy Bird** using **Double Deep Q-Network (DDQN)** — an improved deep reinforcement learning algorithm over standard DQN. The agent observes the game state, learns through thousands of trials, and masters pipe-dodging without ever being explicitly programmed how.
+
+
 
 <div align="center">
 
@@ -79,7 +21,7 @@
 
 </div>
 
----
+
 
 ## 🧠 How It Works
 
@@ -127,7 +69,6 @@ Output Layer  (2 neurons)          ← Q-values for [No Flap, Flap]
 | **Reward Shaping** | +0.1 survival/step, +0.2 centering bonus, −5.0 death penalty |
 | **Gradient Clipping** | Prevents catastrophic forgetting from bad mini-batches |
 
----
 
 ## 🗂️ Project Structure
 
@@ -147,7 +88,6 @@ Flappy-Bird-Game-Trained-With-DQN/
     └── flappybirdv0.log       # Training reward log
 ```
 
----
 
 ## ⚙️ Installation
 
@@ -184,7 +124,6 @@ $env:KMP_DUPLICATE_LIB_OK="TRUE"
 
 Run this once before any python command in the same terminal session.
 
----
 
 ## 🚀 Usage
 
@@ -196,7 +135,6 @@ Control the bird yourself using the **Spacebar**:
 python game_flappy_bird.py
 ```
 
----
 
 ### 🏋️ Train the Agent
 
@@ -208,7 +146,6 @@ python agent.py flappybirdv0 --train
 - Best model auto-saved to `runs/flappybirdv0_best.pt`
 - Training progress logged to `runs/flappybirdv0.log`
 
----
 
 ### 🤖 Watch the Trained Agent Play
 
@@ -220,7 +157,6 @@ python agent.py flappybirdv0
 python agent.py flappybirdv0 --test-episodes 20
 ```
 
----
 
 ### 🏆 Find & Render the Best Episode
 
@@ -236,7 +172,6 @@ Change `SEARCH_COUNT` inside `render_best.py` to search more episodes:
 SEARCH_COUNT = 500  # search 500 silent runs before rendering the best
 ```
 
----
 
 ### ➕ Add a New Hyperparameter Set
 
@@ -261,7 +196,6 @@ Then train with:
 python agent.py my_experiment --train
 ```
 
----
 
 ## 🎛️ Hyperparameters
 
@@ -291,7 +225,6 @@ Configured via `parameters.yaml`:
 
 > With `epsilon_decay: 0.9998`, the agent reaches near-greedy behavior at ~15,000 episodes. **Sweet spot: 20,000–30,000 episodes.**
 
----
 
 ## 📊 Training Results
 
@@ -312,7 +245,6 @@ New best reward = 143.87  at episode 26169   ← current best
 
 > 📁 Full logs saved to `runs/flappybirdv0.log`
 
----
 
 ## 🔧 Improvements Over Basic DQN
 
@@ -329,7 +261,6 @@ New best reward = 143.87  at episode 26169   ← current best
 | **Larger batch size (64)** | Less noisy gradient updates |
 | **Lower LR (0.0005)** | Smoother, more stable convergence |
 
----
 
 ## 🛠️ Technologies Used
 
@@ -353,7 +284,6 @@ New best reward = 143.87  at episode 26169   ← current best
 | `PyYAML` | Hyperparameter configuration |
 | `NumPy` | Reward history & statistics |
 
----
 
 ## 🤝 Contributing
 
@@ -365,18 +295,4 @@ Contributions are welcome! Feel free to:
 4. 📤 Push to the branch: `git push origin feature/your-feature`
 5. 📬 Open a Pull Request
 
----
 
-## 📄 License
-
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
-
----
-
-<div align="center">
-
-Made with ❤️ and a lot of failed flaps.
-
-⭐ **Star this repo if the bird finally made it through!** ⭐
-
-</div>
