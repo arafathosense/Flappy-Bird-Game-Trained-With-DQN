@@ -2,7 +2,9 @@
 
 **Flappy-Bird-Game-Trained-With-DQN** trains an autonomous AI agent to play **Flappy Bird** using **Double Deep Q-Network (DDQN)** — an improved deep reinforcement learning algorithm over standard DQN. The agent observes the game state, learns through thousands of trials, and masters pipe-dodging without ever being explicitly programmed how.
 
+## 🎮 Result Preview
 
+![Demo](https://raw.githubusercontent.com/arafathosense/Flappy-Bird-Game-Trained-With-DQN/main/output/output.gif)
 
 <div align="center">
 
@@ -70,31 +72,13 @@ Output Layer  (2 neurons)          ← Q-values for [No Flap, Flap]
 | **Gradient Clipping** | Prevents catastrophic forgetting from bad mini-batches |
 
 
-## 🗂️ Project Structure
-
-```
-Flappy-Bird-Game-Trained-With-DQN/
-│
-├── 📄 agent.py               # Core DDQN agent — training & inference loop
-├── 📄 dqn.py                 # Neural network definition (3 hidden layers)
-├── 📄 experiance_replay.py   # Replay memory buffer
-├── 📄 game_flappy_bird.py    # Play manually with keyboard input
-├── 📄 render_best.py         # Find & render the best episode silently
-├── 📄 parameters.yaml        # Hyperparameter configuration sets
-│
-└── 📁 runs/
-    ├── flappybirdv0.pt        # Latest best model weights
-    ├── flappybirdv0_best.pt   # All-time best model weights
-    └── flappybirdv0.log       # Training reward log
-```
-
 
 ## ⚙️ Installation
 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/saifullah857/Flappy-Bird-Game-Trained-With-DQN.git
+git clone https://github.com/arafathosense/Flappy-Bird-Game-Trained-With-DQN.git
 cd Flappy-Bird-Game-Trained-With-DQN
 ```
 
@@ -134,44 +118,6 @@ Control the bird yourself using the **Spacebar**:
 ```bash
 python game_flappy_bird.py
 ```
-
-
-### 🏋️ Train the Agent
-
-```bash
-python agent.py flappybirdv0 --train
-```
-
-- Trains indefinitely until you stop with **Ctrl+C**
-- Best model auto-saved to `runs/flappybirdv0_best.pt`
-- Training progress logged to `runs/flappybirdv0.log`
-
-
-### 🤖 Watch the Trained Agent Play
-
-```bash
-# Watch 10 episodes (default)
-python agent.py flappybirdv0
-
-# Watch a specific number of episodes
-python agent.py flappybirdv0 --test-episodes 20
-```
-
-
-### 🏆 Find & Render the Best Episode
-
-Silently tests N episodes in the background, finds the highest scoring one, then renders only that:
-
-```bash
-python render_best.py
-```
-
-Change `SEARCH_COUNT` inside `render_best.py` to search more episodes:
-
-```python
-SEARCH_COUNT = 500  # search 500 silent runs before rendering the best
-```
-
 
 ### ➕ Add a New Hyperparameter Set
 
@@ -243,8 +189,6 @@ New best reward = 124.28  at episode 25301
 New best reward = 143.87  at episode 26169   ← current best
 ```
 
-> 📁 Full logs saved to `runs/flappybirdv0.log`
-
 
 ## 🔧 Improvements Over Basic DQN
 
@@ -263,8 +207,6 @@ New best reward = 143.87  at episode 26169   ← current best
 
 
 ## 🛠️ Technologies Used
-
-<div align="center">
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
@@ -296,3 +238,12 @@ Contributions are welcome! Feel free to:
 5. 📬 Open a Pull Request
 
 
+## 👤 Author
+
+**HOSEN ARAFAT**  
+
+**Bachelor of Software Engineering, China**  
+
+**GitHub:** https://github.com/arafathosense
+
+**Research Interest: Image Computing and Perceptual Intelligence**
